@@ -1,0 +1,51 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://192.168.189.128:3306/lease?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8
+    username: root
+    password: root
+    hikari:
+      connection-test-query: SELECT 1
+      connection-timeout: 60000
+      idle-timeout: 500000
+      max-lifetime: 1800000
+      maximum-pool-size: 12
+      pool-name: SPHHikariPool
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  data:
+    redis:
+      host: 192.168.189.128
+      port: 6379
+      database: 0
+      password: root
+springdoc:
+  default-flat-param-object: true
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      update-strategy: not_empty
+
+
+
+
+minio:
+  endpoint: http://192.168.189.128:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket-name: minio-bucket
+
+admin:
+  auth:
+    path-patterns:
+      include: /admin/**
+      exclude: /admin/login/**
+
+
