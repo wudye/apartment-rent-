@@ -1,16 +1,8 @@
-send sms 
-    in China:
-         <dependency>
-                <groupId>com.aliyun</groupId>
-                <artifactId>dysmsapi20170525</artifactId>
-                <version>${aliyun.sms.version}</version>
-            </dependency>
-    replace:
-        <!-- https://mvnrepository.com/artifact/com.twilio.sdk/twilio -->
-        <dependency>
-            <groupId>com.twilio.sdk</groupId>
-            <artifactId>twilio</artifactId>
-            <version>10.9.2</version>
-        </dependency>
+This is from the IT school AiGuiGu monolithic project
+<br>
+change the mybatis-plus to jpa 
 
-validate the image 
+others remain same  
+
+frontend and mobil version are vue  
+source codes are in original 
